@@ -4,7 +4,8 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/Home'
 import Navigation from './components/Navigation'
-import Products from './components/Products'
+import ProductsList from './components/ProductsList'
+import ProductDetail from './components/ProductDetail'
 
 
 function App() { 
@@ -13,10 +14,12 @@ function App() {
       <Route path='/'component={Navigation} />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/products' component={Products} />  
+        <Route exact path='/products' component={ProductsList} />
+        <Route path='/products/:id' component={ProductDetail} />    
       </Switch>
     </Router> 
   );
 }
 
 export default App;
+ 
