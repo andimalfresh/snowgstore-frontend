@@ -17,6 +17,31 @@ class ProductDetail extends Component {
                 })
             })
     }
+
+    initiateStripeCheckout = async () => {
+        console.log('initiating')
+        const stripe = window.Stripe('pk_test_MTQSb4lGSImPrW41fw1Fe3EO00FsKG3fxd')
+
+        try {
+          // Initiate checkout session to get session id
+          const response = await fetch('http://localhost:4000/api/checkout', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            }
+          })
+          const data = await response.json()
+          const sessionId = data.session.id
+      
+        //  Redirect to checkout
+          const result = await stripe.redirectToCheckout({ sessionId })
+      
+        } catch (error) {
+          console.log('STRIPE ERROR', error)
+        }
+      }
+
     render() {
     return (
         <Card>
@@ -24,6 +49,7 @@ class ProductDetail extends Component {
         <img src={this.state.product.img_Url} alt="product view" />
         <h4>{this.state.product.description}</h4>
         <h3>${this.state.product.price/100}</h3>
+        <button onClick={this.initiateStripeCheckout}> Purchase </button>
         </Card>
             ) 
         }
