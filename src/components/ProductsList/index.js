@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import styles from './products-list.module.scss'
 
-import ProductCard from'./ProductCard'
+import ProductCard from './ProductCard'
 
 
 

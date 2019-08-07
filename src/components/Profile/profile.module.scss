@@ -1,0 +1,24 @@
+
+.profileCard {
+    width: 40vw;
+    height: 40vh;
+    background-color: grey;
+    display: Flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height:150px;
+        width:150px;
+    }
+    .codeSnippet {
+        display: none;
+    }
+    .Name {
+        color: Pink;
+    }
+    .Email { 
+    color: orangered;
+    }
+}
