@@ -8,8 +8,10 @@ return (
     <nav>
       <Link to='/'>Home</Link>
       <Link to='/products'>Products</Link>
+
       {isAuthenticated && <Link to='/profile'>Profile</Link>}
-        {!isAuthenticated && (
+        
+      {!isAuthenticated && (
           <button
             onClick={() =>
               loginWithRedirect({})
