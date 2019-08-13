@@ -1,24 +1,32 @@
 
 .profileCard {
-    width: 40vw;
-    height: 40vh;
-    background-color: grey;
-    display: Flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    width: 100vw;
+    height: 100vh;
+    padding: 100px;
+    margin: 15px;
+    background-color:white;
     img {
-        height:150px;
-        width:150px;
+        height:200px;
+        width: 200px;
     }
     .codeSnippet {
         display: none;
     }
     .Name {
-        color: Pink;
+        color: RED;
+        font-weight: bolder;
     }
     .Email { 
-    color: orangered;
+    font-weight: bold;
+    }
+    .backButton {
+        padding: 10px;
+        background-color: red;
+        color: white;
+        border-radius: 5%;
+    }
+    .backButton:hover {
+        background-color: white;
+        color: red;
     }
 }

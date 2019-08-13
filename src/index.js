@@ -26,6 +26,7 @@ const onRedirectCallback = appState => {
       client_id={config.clientId}
       redirect_uri={window.location.origin}
       onRedirectCallback={onRedirectCallback}
+      audience={config.audience}     // NEW - specify the audience value
     >
       <App />
     </Auth0Provider>,

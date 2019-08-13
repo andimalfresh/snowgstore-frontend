@@ -3,7 +3,7 @@ import './App.scss';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/Home'
-import Navigation from './components/Navigation/Navigation'
+import Navigation from './components/Navigation'
 import ProductsList from './components/ProductsList'
 import ProductDetail from './components/ProductDetail'
 import PaymentSuccess from './components/PaymentSuccess'

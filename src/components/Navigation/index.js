@@ -13,13 +13,13 @@ return (
       {isAuthenticated && <Link className={styles.navButton} to='/profile'>PROFILE</Link>}
         
       {!isAuthenticated && (
-          <Link className={styles.navButton}
+          <button className={styles.navButton}
             onClick={() =>
               loginWithRedirect({})
             }
           >
             LOG IN
-          </Link>
+          </button>
         )}
 
         {isAuthenticated && <Link className={styles.navButton} onClick={() => logout()}>LOG OUT</Link>}

@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './profile.module.scss'
 import { useAuth0 } from '../../react-auth0-wrapper'
 
@@ -18,6 +19,7 @@ const Profile = () => {
       <h2 className={styles.Name}>{user.name}</h2>
       <p className={styles.Email}>{user.email}</p>
       <code className={styles.codeSnippet} >{JSON.stringify(user, null, 2)}</code>
+      <Link className={styles.backButton} to='/'>Back to Home </Link>
     </div>
   )
 }

@@ -1,5 +1,13 @@
-.image {
-    max-width:100%;
-    // width: 250px;
-    // height: 250px;
+img {
+    width: 250px;
+    height: 250px;
 }
+a:link, a:visited {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+ a:link:hover {
+     color: red;
+ }

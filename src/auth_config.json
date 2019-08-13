@@ -1,4 +1,5 @@
 {
     "domain": "snowg-store-dev.auth0.com",
-    "clientId": "RKBFwBsfWW6zbY228xjhrJ44btG9HUAS"
+    "clientId": "RKBFwBsfWW6zbY228xjhrJ44btG9HUAS",
+    "audience": "http;//localhost:4000"
   }

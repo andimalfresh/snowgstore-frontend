@@ -1,0 +1,14 @@
+.canceledDiv {
+    padding: 100px;
+    margin: 15px;
+    .backButton {
+        padding: 10px;
+        background-color: red;
+        color: white;
+        border-radius: 5%;
+    }
+    .backButton:hover {
+        background-color: white;
+        color: red;
+    }
+}

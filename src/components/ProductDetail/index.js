@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Card from '../Card'
+import styles from './product-detail.module.scss' 
 class ProductDetail extends Component {
 
     state= {
@@ -54,13 +55,13 @@ class ProductDetail extends Component {
 
     render() {
     return (
-        <Card>
-        <h2>{this.state.product.name}</h2>
-        <img src={this.state.product.img_Url} alt="product view" />
-        <h4>{this.state.product.description}</h4>
-        <h3>${this.state.product.price/100}</h3>
-        <button onClick={this.initiateStripeCheckout}> Purchase </button>
-        </Card>
+            <Card>
+            <h2>{this.state.product.name}</h2>
+            <img src={this.state.product.img_Url} alt="product view" />
+            <h4>{this.state.product.description}</h4>
+            <h3>${this.state.product.price/100}</h3>
+            <button className={styles.buttonStyle} onClick={this.initiateStripeCheckout}> Purchase </button>
+            </Card>
             ) 
         }
     }
